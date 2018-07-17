@@ -46,7 +46,7 @@ SvgCircle.defaultProps = {
   max: 24,
   radius: 144,
   stroke: '#E90D00',
-  strokeWidth: 30,
+  strokeWidth: 24,
 }
 
 class Clock extends React.Component {
@@ -166,7 +166,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="app">
-         <h1 className="app__title">State of the unit - BU ES 2018</h1>
+         <h1 className="app__title">State of the unit</h1>
         
         <Clock deadline={this.state.deadline} />
         <form className="form" onSubmit={this.handleSubmit}>
@@ -179,7 +179,7 @@ class App extends React.Component {
            />
           <button className="btn" type="submit">Set Date</button>
         </form>
-        <h2 className="app__subtitle">Countdown to {this.formatDate()} - 13:15 <span>(Cluj Napoca time)</span></h2>
+        <h2 className="app__subtitle">Time until {this.formatDate()} (Cluj Napoca timezone)</h2>
         {
           this.state.error &&
             <div className="message message--error">{this.state.error}</div>

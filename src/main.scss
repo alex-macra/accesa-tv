@@ -8,11 +8,8 @@ $bg-image: linear-gradient(135deg, #0097ba, rgba(white, .2))
 
 html, body, #app
   height: 100%
-  
+
 body
-  margin: 0 
-  overflow: hidden
-  padding: 0
   background-attachment: fixed
   background-blend-mode: normal
   background-color: $color-bg
@@ -21,20 +18,6 @@ body
   font-family: 'Nixie One', 'Segoe UI', 'Helvetica Neue', sans-serif
   font-weight: 400
   margin: 0
- 	  
-  
-body > img
-  position: absolute
-  left: 30px
-  top: 40px
-  width: 200px
-  filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.15))
-  
-body > div > iframe
-  width: 100%
-  overflow: hidden
-  height: calc(100vh + 55px)
-  margin-top: -55px 
   
 button,
 input
@@ -55,23 +38,16 @@ input
  
   &__title
     font-weight: 200
-    margin: 4rem auto 4rem
+    margin: 3rem auto 4rem
     text-align: center
     text-transform: uppercase
     font-size: 5rem
-    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.15))
-    color: #fefefe
-    padding: 0 250px
 
   &__subtitle
     font-weight: 400
     margin: 2rem auto 2rem
     text-align: center
     font-size: 2rem
-    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.15))
-    span 
-      color: #ffcec3
-      
     
 .clock
   align-items: center
@@ -95,15 +71,13 @@ input
     text-align: center
     top: 0
     width: 100%
-    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.05))
   
   &__amount
     font-size: 7rem
-    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.05))
     
   &__unit
     font-size: 1rem
-    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.05))
+  
 .circle
   transform: rotate(-90deg)
   transform-origin: 50% 50%
@@ -113,8 +87,7 @@ input
   align-items: center
   display: flex
   margin-bottom: 1rem
-  visibility: hidden
-  
+ 
 .btn,
 .form__field
   border: 1px solid rgba(black, .2)
@@ -138,3 +111,4 @@ input
     background-color: $color-primary
     color: rgba(white, .6)
     padding: 1rem
+    
