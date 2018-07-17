@@ -1,0 +1,140 @@
+$color-bg: #0097ba
+$color-primary: #E90D00
+$color-text:#fff
+$bg-image: linear-gradient(135deg, #0097ba, rgba(white, .2))
+
+*
+  box-sizing: inherit
+
+html, body, #app
+  height: 100%
+  
+body
+  margin: 0 
+  overflow: hidden
+  padding: 0
+  background-attachment: fixed
+  background-blend-mode: normal
+  background-color: $color-bg
+  background-image: $bg-image
+  color: $color-text
+  font-family: 'Nixie One', 'Segoe UI', 'Helvetica Neue', sans-serif
+  font-weight: 400
+  margin: 0
+ 	  
+  
+body > img
+  position: absolute
+  left: 30px
+  top: 40px
+  width: 200px
+  filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.15))
+  
+body > div > iframe
+  width: 100%
+  overflow: hidden
+  height: calc(100vh + 55px)
+  margin-top: -55px 
+  
+button,
+input
+  color: inherit
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+  
+::placeholder
+  color: lighten($color-text, 60%)
+
+.app
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 100%
+ 
+  &__title
+    font-weight: 200
+    margin: 4rem auto 4rem
+    text-align: center
+    text-transform: uppercase
+    font-size: 5rem
+    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.15))
+    color: #fefefe
+    padding: 0 250px
+
+  &__subtitle
+    font-weight: 400
+    margin: 2rem auto 2rem
+    text-align: center
+    font-size: 2rem
+    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.15))
+    span 
+      color: #ffcec3
+      
+    
+.clock
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-bottom: 2rem
+  
+  &__display
+    height: 336px
+    position: relative
+    width: 336px
+  
+  &__text
+    align-items: center
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: center
+    position: absolute
+    text-align: center
+    top: 0
+    width: 100%
+    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.05))
+  
+  &__amount
+    font-size: 7rem
+    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.05))
+    
+  &__unit
+    font-size: 1rem
+    filter: drop-shadow(32px -20px 3px rgba(255,255,255,0.05))
+.circle
+  transform: rotate(-90deg)
+  transform-origin: 50% 50%
+  transition: stroke-dashoffset .4s cubic-bezier(.4, 0, 0, 1.7)
+  
+.form
+  align-items: center
+  display: flex
+  margin-bottom: 1rem
+  visibility: hidden
+  
+.btn,
+.form__field
+  border: 1px solid rgba(black, .2)
+  padding: 1rem .5rem
+  
+.form__field
+  flex-shrink: 1
+  color: #f04e29
+
+.btn
+  background-color: $color-primary
+  color: rgba(white, .75)
+  cursor: pointer
+  flex-shrink: 1
+  
+.message
+  margin: 0 auto 1rem
+  text-align: center
+  
+  &--error
+    background-color: $color-primary
+    color: rgba(white, .6)
+    padding: 1rem
